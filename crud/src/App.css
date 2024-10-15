@@ -1,0 +1,12 @@
+/* Making sure there is no margin in our mobile screen because by default our navbar was taking the space on left */
+.content {
+  margin-left: 0px; /* To set No left margin on small screens */
+  padding: 20px; /* Adding padding around the content */
+}
+
+/* Margin for desktop view (larger screens) */
+@media (min-width: 769px) {
+  .content {
+    margin-left: 250px; /* On larger screens, pushing the content to the right to make space for navbar on right */
+  }
+}

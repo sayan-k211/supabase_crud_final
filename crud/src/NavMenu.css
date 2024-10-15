@@ -1,0 +1,92 @@
+/* Basic styling for the navigation bar */
+.nav {
+    position: fixed; /* To keep the nav fixed on the left */
+    left: 0; /* To align to the left side */
+    width: 250px; /* Setting the width of the nav */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #2b2d42; /* Adding background color dark*/
+    z-index: 1000; /* To ensure the nav stays on top of other elements */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in/out effect */
+    overflow-y: auto; /* TO allow vertical scrolling */
+    scroll-behavior: smooth; /* To enable smooth scrolling */
+    overflow: hidden; /* Hide any part of the nav when offscreen */
+}
+
+/* Styling for the list and links inside the nav */
+.nav ul {
+    list-style-type: none; /* To remove bullets from the list */
+    padding: 0; /* To remove default padding */
+    margin: 0; /* To remove default margin */
+}
+
+/* Styling for each list item */
+.nav li {
+    padding: 10px; /* Adding padding for better spacing */
+    font-size: 1.2rem; /* Making larger font size for readability */
+}
+
+/* Styling for links inside the nav */
+.nav li a {
+    color: white; /* Setting white text color */
+    text-decoration: none; /* To remove underline from links */
+    font-size: large; /* Making the link text larger */
+}
+
+/* To change link color when hovered over */
+.nav li a:hover {
+    color: red; /* To change link color to red on hover */
+}
+
+/* Styling for the active link */
+.active-link {
+    color: red !important; /* To set active link is red */
+    font-weight: bold; /* To make the active link bold */
+}
+
+/* To make burger icon hidden for larger screens */
+.mobile-menu-icon {
+    display: none; 
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+    /* To hide the nav off-screen in mobile view */
+    .nav {
+        transform: translateX(-105%); /* To move the nav out of view */
+        width: 100%; /* Setting navbar full width on mobile when burger icon is pressed*/
+        height: 100vh; /*Setting navbar full height on mobile when burger icon is pressed */
+        background-color: #2b2d42; /* Keeping the same background color */
+    }
+
+    /* To show the nav when it's toggled open */
+    .nav.open {
+        transform: translateX(0); /* To slide the nav back into view */
+    }
+
+    /* To ensure the nav items are displayed vertically */
+    .nav ul {
+        display: flex;
+        flex-direction: column; /* To stack the items vertically */
+        align-items: flex-start; /* To align items to the left */
+        padding: 0; /*Making sure there is no padding*/
+        margin: 0; /*Making sure there is no margin*/
+    }
+
+    /* Styling for each list item on mobile */
+    .nav li {
+        padding: 10px; /* Adding padding for space */
+        font-size: 1.2rem; /* Font size for better visibility */
+    }
+
+    /* Mobile menu icon styling */
+    .mobile-menu-icon {
+        display: block; /* To show the menu icon */
+        position: fixed; /* To fix the icon to the top right */
+        top: 15px; /* Setting it on 15px from top */
+        right: 15px; /* Setting it on 15px away from right side of screen */
+        font-size: 2.5rem; /* Increasing size for better visibility */
+        color: #808080; /* To set the icon color */
+        cursor: pointer; /* To change cursor to pointer */
+        z-index: 1100; /* To ensure the icon is on top of other elements */
+    }
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importing the Roboto font */
+
+/* Resetting margin/padding and ensuring no horizontal scroll */
+body, html {
+    margin: 0; /* To remove default margin */
+    padding: 0; /* To remove default padding */
+    width: 100%; /* Full width of the viewport */
+    overflow-x: hidden; /* To prevent horizontal scrolling */
+    height: 100%; /* To ensure full height of the viewport */
+}
+
+/* Styling for the navigation bar */
+.nav {
+    position: fixed; /* To fix the nav on the left side */
+    left: 0; /* To stick to the left */
+    width: 250px; /* To set the width of the nav */
+    height: 100vh; /* Full viewport height */
+    background-color: #2b2d42; /* To set background color of navbar */
+    z-index: 1000; /* To ensure nav is on top of other elements */
+    overflow-y: auto; /* To enable scrolling if nav content is too long as our nav items is more than 20 */
+}
+
+/* Wrapper to center the content both vertically and horizontally */
+.main-content {
+    display: flex; /*Flexbox layout for main content*/
+    justify-content: center; /* To center content horizontally */
+    align-items: center; /* To center content vertically */
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://raw.githubusercontent.com/sayan-k211/scp_crud/main/scp-image/scp_logo.jpg'); /* Setting SCP background image */
+    background-size: cover; /* To ensure the image covers the entire background */
+    background-position: center; /* To center the background image */
+    background-repeat: no-repeat; /* To prevent the background from repeating */
+    padding: 20px; /* To add padding for better spacing on Mobile screen */
+}
+
+/* Container for the home content  */
+.home-container {
+    text-align: center; /* To center the text inside the container */
+    position: relative; /* Setting position relative to allow backdrop effect */
+    background-color: hsl(0deg 0% 100% / 93%); /* Setting transparent white background */
+    padding: 40px 30px; /* Adding padding around the content */
+    border-radius: 12px; /* Making rounded corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    max-width: 600px; /* Limiting the maximum width */
+    width: 100%; /* To ensure it takes the full width on Mobile screens */
+}
+
+/* Styling for headings */
+h1 {
+    font-size: 32px; /* Making font size larger for the heading */
+    color: green; /* To set the text color to green */
+    margin-bottom: 20px; /* Adding space below the heading */
+}
+
+/* Styling for paragraphs */
+p {
+    font-size: 18px; /* Making slightly smaller font for text */
+    color: black; /* Setting text color black */
+    margin-bottom: 30px; /* Adding space below the paragraph */
+}
+
+/* Container for buttons */
+.home-buttons {
+    display: flex; /* Flexbox layout for buttons */
+    justify-content: center; /* To center the buttons */
+    gap: 20px; /* To add space between buttons */
+    flex-wrap: wrap; /* To wrap buttons on mobile screens */
+}
+
+/* Styling for the buttons */
+.home-button {
+    display: inline-block; /* To ensure buttons behave like blocks but inline */
+    padding: 12px 24px; /* Adding padding inside the button */
+    background-color: #007bff; /* Making background color blue for button  */
+    color: white; /* Setting text color white*/
+    text-decoration: none; /* To remove underline from text */
+    font-size: 16px; /* Seeting button text size */
+    border-radius: 8px; /* Making rounded corners */
+    transition: background-color 0.3s ease; /* Adding smooth hover transition */
+}
+
+/* Change button color on hover */
+.home-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 20px 15px; /* Smaller padding for mobile screens */
+        margin: 10px; /* Adding margin around the container */
+    }
+
+    h1 {
+        font-size: 28px; /* Slightly smaller font for the heading */
+    }
+
+    p {
+        font-size: 16px; /* Slightly smaller font for paragraphs */
+    }
+
+    .home-button {
+        padding: 10px 20px; /* Smaller padding for buttons */
+        font-size: 14px; /* Smaller font for button text */
+    }
+}

@@ -1,0 +1,180 @@
+/* Global Styles for the entire app */
+body {
+    margin: 0; /* To remove default margin */
+    padding: 0; /* To remove default padding */
+    font-family: 'Arial', sans-serif; /* Setting font to Arial */
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text color for readability */
+    line-height: 1.6; /* Improving text spacing for readability */
+    overflow-x: hidden; /* To prevent horizontal scrolling */
+}
+
+/* Container for item details */
+.item-detail-container {
+    max-width: 800px; /* To limit the maximum width */
+    margin: 20px auto; /* To center the container */
+    padding: 2rem; /* Padding inside the container */
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 10px; /* Making rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* To prevent child elements from overflowing */
+}
+
+/* Styling for SCP item headings */
+.item-detail-container h1, .item-detail-container h2 {
+    font-size: 2.5rem; /*Making font size large for headings */
+    color: black; /* Black text for Scp name */
+    text-align: center; /* To center the headings */
+    margin: 0.5em 0; /* Adding vertical spacing around headings */
+}
+
+.item-detail-container h2 {
+    font-size: 1.8rem; /* Making slightly smaller font for subheadings */
+    color: #ef233c; /* Adding red color for class*/
+}
+
+/* Styling for images */
+.item-detail-container img {
+    display: block; /* To display image as block */
+    margin: 1rem auto; /* To center the image and add vertical margin */
+    border-radius: 10px; /* Making rounded corners for the image */
+    max-width: 100%; /* To ensure the image is responsive */
+    height: auto; /* To maintain aspect ratio */
+}
+
+/* Styling for section headings */
+.item-detail-container h3 {
+    font-size: 1.6rem; /* Medium font size for section headings */
+    color: #2b2d42; /* Dark color for section headings */
+    border-bottom: 2px solid #8d99ae; /* Bottom border for visual separation */
+    padding-bottom: 0.5em; /* Adding padding below the heading */
+    margin-bottom: 1em; /* Adding margin below the section heading */
+}
+
+/* Styling for paragraphs */
+.item-detail-container p {
+    font-size: 1.2rem; /* To set paragraph font size */
+    text-align: justify; /* to justify text for better readability */
+}
+
+/* Styling for the loading state */
+.loading-message {
+    font-size: 1.4rem; /* Medium font size for loading message */
+    text-align: center; /* To center the loading message */
+    color: #8d99ae; /* Setting light grey color for loading text */
+}
+
+/* Styling for feedback/error messages */
+.feedback-message {
+    color: #dc3545; /* Red color for error messages */
+    text-align: center; /* Center the feedback message */
+    font-size: 1.2rem; /* Font size for feedback text */
+    margin-top: 20px; /* Adding margin above feedback message */
+}
+
+/* Styling for the admin panel */
+.admin-panel {
+    max-width: 900px; /* Setting maximum width for the admin panel */
+    margin: 20px auto; /* To enter the admin panel */
+    padding: 20px; /* Adding padding inside the panel */
+    background-color: #ffffff; /* Making background white for contrast */
+    border-radius: 8px; /* Making rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adding shadow for depth */
+    text-align: center; /* To center text inside the admin panel */
+}
+
+.admin-panel h2, .admin-panel h3 {
+    color: #333; /* Dark color for headings */
+    margin-bottom: 1rem; /* Adding space below headings */
+}
+
+/* Styling for unordered lists inside the admin panel */
+.admin-panel ul {
+    list-style-type: none; /* To remove bullet points from lists */
+    padding: 0; /* To remove default padding */
+}
+
+/* Styling for list items inside the admin panel */
+.admin-panel li {
+    margin-bottom: 1rem; /* Adding space below each item */
+    background-color: #f8f9fa; /* Making light background for contrast */
+    padding: 10px; /* Adding padding inside list items */
+    border-radius: 5px; /* To make rounded corners for list items */
+    display: flex; /* Flexbox layout for list items */
+    justify-content: space-between; /* To add space between elements */
+    align-items: center; /* To align items vertically */
+}
+
+/* Styling for inputs and buttons in the admin panel */
+.admin-panel input, .admin-panel button {
+    padding: 10px; /* Adding padding inside inputs and buttons */
+    border-radius: 5px; /* To make rounded corners */
+    margin: 5px; /* Adding space between elements */
+    flex: 1; /* To allow inputs and buttons to grow to fill space */
+}
+
+/* Styling for buttons */
+.admin-panel button {
+    border: none; /* To remove default button border */
+    background-color: #007bff; /* Blue background for buttons */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+/* Hover effect for buttons */
+.admin-panel button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the cancel button */
+.admin-panel button.cancel-button {
+    background-color: #dc3545; /* Red background for cancel button */
+}
+
+/* Hover effect for cancel button */
+.admin-panel .cancel-button:hover {
+    background-color: #a32a36; /* Darker red on hover */
+}
+
+/* Styling for the 'Add New' button */
+.admin-panel button.addNew {
+    background-color: green; /* Green background for the add new button */
+}
+
+/* Hover effect for 'Add New' button */
+.admin-panel button.addNew:hover {
+    background-color: rgb(21, 98, 21); /* Darker green on hover */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .admin-panel, .item-detail-container {
+        padding: 10px; /* To reduce padding on mobile */
+        margin: 0 auto; /* To center the content on mobile */
+        width: 100%; /* Making sure to take full width for responsive */
+        box-sizing: border-box; /* To include padding in width calculations */
+    }
+
+    /* Adjusting add new item button as it was exceeding container box */
+    .admin-panel .addNew-container {
+        width: 91%;
+    }
+
+    /* Full width for inputs and buttons on mobile */
+    .admin-panel input, .admin-panel button {
+        width: 100%; /* And again making sure other inputs take full width on small screens */
+        margin-bottom: 5px; /* Adding space below inputs and buttons */
+    }
+
+    /* Stack list items vertically on mobile */
+    .admin-panel li {
+        flex-direction: column; /* To stack items in a column */
+        align-items: flex-start; /* To align items to the left */
+    }
+}
+
+/* To ensure the item detail container is centered and padded on mobile */
+.item-detail-container {
+    margin: 0 auto; /* To center the container */
+    padding: 15px; /* Adding padding inside the container */
+}
